@@ -1,18 +1,12 @@
 package com.rabbitminers.extendedbogeys.mixin;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.rabbitminers.extendedbogeys.base.Constants;
 import com.rabbitminers.extendedbogeys.bogeys.common.CommonBogeyFunctionality;
 import com.rabbitminers.extendedbogeys.data.ExtendedBogeysBogeySize;
 import com.rabbitminers.extendedbogeys.registry.ExtendedBogeysBlocks;
-import com.simibubi.create.AllBogeyStyles;
-import com.simibubi.create.AllItems;
 import com.simibubi.create.content.trains.bogey.*;
 import com.simibubi.create.foundation.utility.Components;
-import com.simibubi.create.foundation.utility.Iterate;
-import com.simibubi.create.foundation.utility.Lang;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
@@ -21,7 +15,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Mixin;
@@ -30,10 +23,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
 
 @Mixin(AbstractBogeyBlock.class)
 public abstract class MixinAbstractBogeyBlock extends Block  {

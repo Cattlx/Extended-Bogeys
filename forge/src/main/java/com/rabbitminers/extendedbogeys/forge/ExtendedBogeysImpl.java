@@ -1,7 +1,6 @@
 package com.rabbitminers.extendedbogeys.forge;
 
 import com.rabbitminers.extendedbogeys.ExtendedBogeys;
-import com.rabbitminers.extendedbogeys.ExtendedBogeysClient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
