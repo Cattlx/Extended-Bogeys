@@ -16,6 +16,8 @@ repositories {
     maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
     maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } //Forge Config API Port
     maven { url = "https://maven.ithundxr.dev/snapshots" }
+    maven { url = "https://maven.createmod.net/" }
+    maven { url = "https://mvn.devos.one/releases/" }
     maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
 }
 

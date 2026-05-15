@@ -1,6 +1,5 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.2"
-    id "me.modmuss50.mod-publish-plugin"
+    id "com.gradleup.shadow" version "9.3.1"
 }
 
 loom {
@@ -54,6 +53,10 @@ repositories {
         }
     }
     maven {
+        name "createmod maven"
+        url "https://maven.createmod.net/"
+    }
+    maven {
         url 'https://www.cursemaven.com'
         content {
             includeGroup "curse.maven"
@@ -71,7 +74,7 @@ dependencies {
     // Create and its dependencies
     modImplementation("com.simibubi.create:create-${minecraft_version}:${create_forge_version}:slim") { transitive = false }
     modImplementation("com.tterrag.registrate:Registrate:${registrate_forge_version}")
-    modImplementation("com.jozufozu.flywheel:flywheel-forge-${flywheel_forge_minecraft_version}:${flywheel_forge_version}")
+    modImplementation("dev.engine-room.flywheel:flywheel-forge-${flywheel_forge_minecraft_version}:${flywheel_forge_version}")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.3.5"))
     implementation(include("io.github.llamalad7:mixinextras-forge:0.3.5"))
@@ -159,11 +162,12 @@ sourcesJar {
     }
 }
 
-components.java {
-    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
-        skip()
-    }
-}
+//TODO: Fix this
+//components.java {
+//    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+//        skip()
+//    }
+//}
 
 sourceSets.main {
     resources { // include generated resources in resources
@@ -172,47 +176,47 @@ sourceSets.main {
     }
 }
 
-publishMods {
-    file = remapJar.archiveFile
-    changelog = getChangelogText("Forge", true)
-    type = STABLE
-
-    version = "$mod_version-$minecraft_version-$raw_create_version-forge"
-    displayName = "Extended Bogeys $mod_version Forge $minecraft_version"
-
-    modLoaders.add("forge")
-    modLoaders.add("neoforge")
-
-    curseforge {
-        projectId = curseforge_forge_id
-        accessToken = System.getenv("CURSEFORGE_TOKEN")
-        minecraftVersions.add(minecraft_version)
-
-        requires {
-            slug = "create"
-        }
-    }
-
-    modrinth {
-        projectId = modrinth_forge_id
-        accessToken = System.getenv("MODRINTH_TOKEN")
-        minecraftVersions.add(minecraft_version)
-
-        requires {
-            slug = "create"
-        }
-    }
-}
-
-publishing {
-    publications {
-        mavenForge(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-
-    repositories {
-        // TODO: Setup maven
-    }
-}
+//publishMods {
+//    file = remapJar.archiveFile
+//    changelog = getChangelogText("Forge", true)
+//    type = STABLE
+//
+//    version = "$mod_version-$minecraft_version-$raw_create_version-forge"
+//    displayName = "Extended Bogeys $mod_version Forge $minecraft_version"
+//
+//    modLoaders.add("forge")
+//    modLoaders.add("neoforge")
+//
+//    curseforge {
+//        projectId = curseforge_forge_id
+//        accessToken = System.getenv("CURSEFORGE_TOKEN")
+//       minecraftVersions.add(minecraft_version)
+//
+//        requires {
+//            slug = "create"
+//        }
+//    }
+//
+//    modrinth {
+//        projectId = modrinth_forge_id
+//        accessToken = System.getenv("MODRINTH_TOKEN")
+//        minecraftVersions.add(minecraft_version)
+//
+//        requires {
+//            slug = "create"
+//        }
+//    }
+//}
+//
+//publishing {
+//    publications {
+//        mavenForge(MavenPublication) {
+//            artifactId = rootProject.archives_base_name + "-" + project.name
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        // TODO: Setup maven
+//    }
+//}

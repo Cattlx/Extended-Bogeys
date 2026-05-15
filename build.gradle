@@ -1,7 +1,6 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.5.+" apply false
-    id "me.modmuss50.mod-publish-plugin" version "0.3.4" apply false // https://github.com/modmuss50/mod-publish-plugin
+    id "dev.architectury.loom" version "1.10.+" apply false
 }
 
 architectury {
@@ -33,10 +32,8 @@ subprojects {
         maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
         maven { url = "https://maven.quiltmc.org/repository/release" } // Quilt Mappings
         maven { // Flywheel
-            url = "https://maven.tterrag.com/"
-            content {
-                includeGroup("com.jozufozu.flywheel")
-            }
+            name "createmod maven"
+            url "https://maven.createmod.net/"
         }
     }
 
