@@ -2,7 +2,7 @@ package com.rabbitminers.extendedbogeys.bogeys.blocks;
 
 import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.AllBogeyStyles;
-import com.simibubi.create.content.schematics.requirement.ISpecialBlockItemRequirement;
+//import com.simibubi.create.content.schematics.requirement.ISpecialBlockItemRequirement;
 import com.simibubi.create.content.trains.bogey.AbstractBogeyBlock;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.bogey.BogeyStyle;
@@ -18,7 +18,8 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 public class ExtraLargeBogeyBlock extends AbstractBogeyBlock<StandardBogeyBlockEntity>
-        implements IBE<StandardBogeyBlockEntity>, ProperWaterloggedBlock, ISpecialBlockItemRequirement {
+        //implements IBE<StandardBogeyBlockEntity>, ProperWaterloggedBlock, ISpecialBlockItemRequirement {
+        implements IBE<StandardBogeyBlockEntity>, ProperWaterloggedBlock {
 
     public ExtraLargeBogeyBlock(Properties props, BogeySizes.BogeySize size) {
         super(props, size);
