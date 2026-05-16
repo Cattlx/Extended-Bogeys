@@ -1,7 +1,7 @@
 package com.rabbitminers.extendedbogeys.bogeys.common;
 
 import com.simibubi.create.content.trains.bogey.AbstractBogeyBlockEntity;
-import com.simibubi.create.foundation.utility.Components;
+import com.rabbitminers.extendedbogeys.base.utility.Components;
 import com.rabbitminers.extendedbogeys.base.utility.NBTHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

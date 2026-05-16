@@ -58,7 +58,7 @@ import com.rabbitminers.extendedbogeys.data.ExtendedBogeysBogeySize;
 import com.simibubi.create.AllBogeyStyles;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.trains.bogey.BogeyStyle;
-import com.simibubi.create.foundation.utility.Components;
+import com.rabbitminers.extendedbogeys.base.utility.Components;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 
 

@@ -5,7 +5,7 @@ import com.rabbitminers.extendedbogeys.bogeys.common.CommonBogeyFunctionality;
 import com.rabbitminers.extendedbogeys.data.ExtendedBogeysBogeySize;
 import com.rabbitminers.extendedbogeys.registry.ExtendedBogeysBlocks;
 import com.simibubi.create.content.trains.bogey.*;
-import com.simibubi.create.foundation.utility.Components;
+import com.rabbitminers.extendedbogeys.base.utility.Components;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
