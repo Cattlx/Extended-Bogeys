@@ -47,7 +47,10 @@ subprojects {
         // layered mappings - Mojmap names, parchment and QM docs and parameters
         mappings(loom.layered {
             it.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${qm_version}:intermediary-v2")
-            it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+            // TODO: There's something weird happening when using multiple mappers.
+            // I'm not sure what the issue is but disabling one of them (I only tried parchment)
+            // it works again.
+            //it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
             it.officialMojangMappings { nameSyntheticMembers = false }
         })
 
