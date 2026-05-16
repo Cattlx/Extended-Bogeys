@@ -2,7 +2,7 @@ package com.rabbitminers.extendedbogeys.mixin;
 
 import com.rabbitminers.extendedbogeys.base.Constants;
 import com.simibubi.create.content.trains.station.StationBlockEntity;
-import com.simibubi.create.foundation.utility.NBTHelper;
+import com.rabbitminers.extendedbogeys.base.utility.NBTHelper;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import org.spongepowered.asm.mixin.Mixin;
