@@ -7,7 +7,7 @@ import com.rabbitminers.extendedbogeys.bogeys.renderers.ExtendedBogeysBogeyRende
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.entity.CarriageBogey;
 import com.simibubi.create.foundation.utility.Iterate;
-import com.simibubi.create.foundation.utility.AngleHelper;
+import com.rabbitminers.extendedbogeys.base.utility.AngleHelper;
 
 import static com.rabbitminers.extendedbogeys.registry.ExtendedBogeysPartials.*;
 
