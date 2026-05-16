@@ -1,6 +1,6 @@
 package com.rabbitminers.extendedbogeys.bogeys.renderers;
 
-import com.jozufozu.flywheel.util.transform.Transform;
+import dev.engine_room.flywheel.lib.transform.Transform;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.rabbitminers.extendedbogeys.base.Constants;

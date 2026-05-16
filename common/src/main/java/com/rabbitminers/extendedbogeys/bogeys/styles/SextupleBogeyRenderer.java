@@ -6,7 +6,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.rabbitminers.extendedbogeys.bogeys.renderers.ExtendedBogeysBogeyRenderer;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.entity.CarriageBogey;
-import com.simibubi.create.foundation.utility.Iterate;
+import com.rabbitminers.extendedbogeys.base.utility.Iterate;
 import com.rabbitminers.extendedbogeys.base.utility.AngleHelper;
 
 import static com.rabbitminers.extendedbogeys.registry.ExtendedBogeysPartials.*;
