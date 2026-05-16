@@ -1,9 +1,9 @@
 package com.rabbitminers.extendedbogeys.compat;
 
-import com.simibubi.create.foundation.utility.Lang;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -30,7 +30,7 @@ public enum Mods {
      * @return the mod id
      */
     public String asId() {
-        return Lang.asId(name());
+        return name().toLowerCase(Locale.ROOT);
     }
 
     public String asFabricId() {
