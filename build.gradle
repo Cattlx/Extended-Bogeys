@@ -1,10 +1,15 @@
 plugins {
     id "architectury-plugin" version "3.4-SNAPSHOT"
     id "dev.architectury.loom" version "1.10.+" apply false
+    id "base"
 }
 
 architectury {
     minecraft = rootProject.minecraft_version
+}
+
+base {
+    archivesName.set(rootProject.archives_base_name)
 }
 
 subprojects {
@@ -65,7 +70,6 @@ allprojects {
     apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
 
-    archivesBaseName = rootProject.archives_base_name
     group = rootProject.maven_group
 
     // Mod version - Minecraft Version - Create Version - Loader
