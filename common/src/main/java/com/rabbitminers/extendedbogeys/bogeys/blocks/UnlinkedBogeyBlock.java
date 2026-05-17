@@ -37,8 +37,10 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 
 public class UnlinkedBogeyBlock extends Block implements IBE<StandardBogeyBlockEntity>, ProperWaterloggedBlock {
@@ -54,9 +56,17 @@ public class UnlinkedBogeyBlock extends Block implements IBE<StandardBogeyBlockE
         return this.size.wheelRadius();
     }
 
+    // TODO: fix this
+    @SuppressWarnings("deprecation")
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
-                                 BlockHitResult hit) {
+    public @NotNull InteractionResult use(
+            @Nonnull BlockState state,
+            @Nonnull Level level,
+            @Nonnull BlockPos pos,
+            @Nonnull Player player,
+            @Nonnull InteractionHand hand,
+            @Nonnull BlockHitResult hit
+    ) {
         if (level.isClientSide)
             return InteractionResult.PASS;
         ItemStack stack = player.getItemInHand(hand);
