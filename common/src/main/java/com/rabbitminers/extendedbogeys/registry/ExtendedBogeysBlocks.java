@@ -14,6 +14,8 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 
+import static com.simibubi.create.api.behaviour.movement.MovementBehaviour.movementBehaviour;
+
 
 public class ExtendedBogeysBlocks {
 	public static final CreateRegistrate REGISTRATE = ExtendedBogeys.registrate();

@@ -4,6 +4,7 @@ import com.simibubi.create.content.trains.entity.CarriageContraptionEntity;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
 public class CarriageContraptionHelper {
+    // TODO: no usages
     @ExpectPlatform
     public static double getDistanceTo(CarriageContraptionEntity cce) {
         throw new AssertionError();

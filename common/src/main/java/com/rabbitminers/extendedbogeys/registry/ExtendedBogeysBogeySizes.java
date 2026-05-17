@@ -8,7 +8,9 @@ public class ExtendedBogeysBogeySizes {
     public static final BogeySizes.BogeySize EXTRA_LARGE = create("extra_large", 14f / 16f);
 
     public static BogeySizes.BogeySize create(String name, float size) {
-        return BogeySizes.addSize(ExtendedBogeys.asResource(name), size);
+        BogeySizes.BogeySize bogeySize = new BogeySizes.BogeySize(ExtendedBogeys.asResource(name), size);
+        BogeySizes.register(bogeySize);
+        return bogeySize;
     }
 
     public static void register() {

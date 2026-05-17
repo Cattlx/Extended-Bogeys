@@ -465,7 +465,7 @@ public class ExtendedBogeysPartials {
     ;
 
     private static PartialModel block(String path) {
-        return new PartialModel(ExtendedBogeys.asResource("block/" + path));
+        return PartialModel.of(ExtendedBogeys.asResource("block/" + path));
     }
     public static void init() {
 

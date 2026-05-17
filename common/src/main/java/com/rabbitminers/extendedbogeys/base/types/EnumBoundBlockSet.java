@@ -1,8 +1,8 @@
 package com.rabbitminers.extendedbogeys.base.types;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+//import net.minecraft.world.item.BlockItem;
+//import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.Nullable;
 
@@ -28,32 +28,36 @@ public class EnumBoundBlockSet<T extends Block, E extends Enum<E>>
         return (BlockEntry<T>) values[block.ordinal()];
     }
 
+    //TODO: no usages
     @Nullable
-    public E enumValueOfBlock(T block) {
-        for (int i = 0; i < values.length; i++) {
-            if (values[i].get() == block)
-                return e.getEnumConstants()[i];
-        }
-        return null;
-    }
+//    public E enumValueOfBlock(T block) {
+//        for (int i = 0; i < values.length; i++) {
+//            if (values[i].get() == block)
+//                return e.getEnumConstants()[i];
+//        }
+//        return null;
+//    }
 
-    public boolean contains(Block block) {
-        for (BlockEntry<?> entry : values) {
-            if (entry.is(block)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    //TODO: no usages
+//    public boolean contains(Block block) {
+//        for (BlockEntry<?> entry : values) {
+//            if (entry.is(block)) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 
-    public boolean contains(Item item) {
-        return item instanceof BlockItem bi && this.contains(bi.getBlock());
-    }
+    //TODO: no usages
+    //public boolean contains(Item item) {
+    //    return item instanceof BlockItem bi && this.contains(bi.getBlock());
+   //}
 
-    @SuppressWarnings("unchecked")
-    public BlockEntry<T>[] toArray() {
-        return (BlockEntry<T>[]) Arrays.copyOf(values, values.length);
-    }
+    //TODO: no usages
+    //@SuppressWarnings("unchecked")
+    //public BlockEntry<T>[] toArray() {
+    //    return (BlockEntry<T>[]) Arrays.copyOf(values, values.length);
+    //}
 
     @Override
     public Iterator<BlockEntry<T>> iterator() {
