@@ -2,14 +2,14 @@ package com.rabbitminers.extendedbogeys.mixin.client;
 
 import com.rabbitminers.extendedbogeys.ExtendedBogeys;
 import com.rabbitminers.extendedbogeys.bogeys.blocks.UnlinkedBogeyBlock;
-import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
+import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.content.trains.bogey.AbstractBogeyBlock;
 import com.simibubi.create.content.trains.bogey.AbstractBogeyBlockEntity;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.bogey.BogeyStyle;
 import com.rabbitminers.extendedbogeys.base.utility.Components;
-import com.simibubi.create.foundation.utility.LangBuilder;
-import com.simibubi.create.foundation.utility.animation.LerpedFloat;
+import net.createmod.catnip.lang.LangBuilder;
+import net.createmod.catnip.animation.LerpedFloat;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -49,12 +49,12 @@ public class MixinAbstractBogeyBlockEntity extends BlockEntity implements IHaveG
         tooltip.add(Components.translatable("extendedbogeys.bogeys.sizes.text")
                 .withStyle(ChatFormatting.GRAY));
 
-        for (BogeySizes.BogeySize value : BogeySizes.getAllSizesSmallToLarge()) {
+        for (BogeySizes.BogeySize value : BogeySizes.allSortedIncreasing()) {
             boolean isImplemented = implementedSizes.contains(value);
             boolean isActive = value == abb.getSize();
 
             tooltip.add(Components.literal(isActive ? "-> " : isImplemented ? "✔ " : "× ")
-                    .append(capitalize(value.location().getPath()))
+                    .append(capitalize(value.id().getPath()))
                     .withStyle(isActive ? ChatFormatting.GOLD : isImplemented
                             ? ChatFormatting.GREEN : ChatFormatting.RED));
         }

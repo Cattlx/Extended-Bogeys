@@ -89,9 +89,9 @@ public class UnlinkedBogeyBlock extends Block implements IBE<StandardBogeyBlockE
 
             Set<BogeySizes.BogeySize> validSizes = style.validSizes();
 
-            for (int i = 0; i < BogeySizes.count(); i++) {
+            for (int i = 0; i < BogeySizes.allSortedIncreasing().size(); i++) {
                 if (validSizes.contains(size)) break;
-                size = size.increment();
+                size = size.nextBySize();
             }
 
             be.setBogeyStyle(style);
@@ -178,7 +178,8 @@ public class UnlinkedBogeyBlock extends Block implements IBE<StandardBogeyBlockE
             state = ExtendedBogeysBlocks.UNLINKED_BOGEYS.get(supported).getDefaultState();
         } else {
             BogeyStyle style = sbte.getStyle();
-            state = style.getBlockOfSize(size).defaultBlockState();
+            //state = style.getBlockOfSize(size).defaultBlockState();
+            state = style.getBlockForSize(size).defaultBlockState();
         }
         return copyProperties(sbte.getBlockState(), state);
     }

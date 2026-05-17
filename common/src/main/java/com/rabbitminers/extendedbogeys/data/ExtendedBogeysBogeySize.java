@@ -34,7 +34,7 @@ public enum ExtendedBogeysBogeySize {
     }
 
     public String id() {
-        return this.size.location().getPath();
+        return this.size.id().getPath();
     }
 
     @Nullable
